@@ -4,19 +4,19 @@
 			"Robby"
 		]
 	},
-	"skinname-liberty": "Fräiheet",
-	"liberty-feed-new": "[Nei]",
-	"liberty-forgot-pw": "Hutt Dir Äert Passwuert vergiess?",
-	"liberty-login": "Aloggen",
-	"liberty-login-btn": "Aloggen",
-	"liberty-info": "Informatioun",
-	"liberty-purge": "Botzen",
-	"liberty-recent-discussions": "Rezent Diskussiounen",
-	"liberty-remember": "Mäi Login verhalen",
-	"liberty-share": "Deelen",
-	"liberty-view-more": "Méi weisen",
+	"skinname-brio": "Fräiheet",
+	"brio-feed-new": "[Nei]",
+	"brio-forgot-pw": "Hutt Dir Äert Passwuert vergiess?",
+	"brio-login": "Aloggen",
+	"brio-login-btn": "Aloggen",
+	"brio-info": "Informatioun",
+	"brio-purge": "Botzen",
+	"brio-recent-discussions": "Rezent Diskussiounen",
+	"brio-remember": "Mäi Login verhalen",
+	"brio-share": "Deelen",
+	"brio-view-more": "Méi weisen",
 	"prefs-color": "Faarwastellung",
 	"prefs-ads": "Astellunge fir d'Pub",
-	"liberty-pref-layout-width": "Statesch Breet",
-	"liberty-pref-fonts-helplabel": "Hëllef"
+	"brio-pref-layout-width": "Statesch Breet",
+	"brio-pref-fonts-helplabel": "Hëllef"
 }

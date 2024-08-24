@@ -4,12 +4,12 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Permissions\RestrictionStore;
 use MediaWiki\Revision\RevisionRecord;
 
-class LibertyTemplate extends BaseTemplate {
+class BrioTemplate extends BaseTemplate {
 	/**
 	 * execute() Method
 	 */
 	public function execute() {
-		global $wgLibertyAdSetting, $wgLibertyMobileReplaceAd;
+		global $wgBrioAdSetting, $wgBrioMobileReplaceAd;
 
 		$skin = $this->getSkin();
 		$user = $skin->getUser();
@@ -17,8 +17,18 @@ class LibertyTemplate extends BaseTemplate {
 		$action = $request->getVal( 'action', 'view' );
 		$title = $skin->getTitle();
 		// @codingStandardsIgnoreStart
-		$LibertyUserSidebarSettings = MediaWikiServices::getInstance()->getUserOptionsLookup()->getOption( $user, 'liberty-layout-sidebar' );
+		$BrioUserSidebarSettings = MediaWikiServices::getInstance()->getUserOptionsLookup()->getOption( $user, 'brio-layout-sidebar' );
 		// @codingStandardsIgnoreEnd
+		$revisionStore = MediaWikiServices::getInstance()->getRevisionStore();
+		$revision = $revisionStore->getRevisionByTitle($title);
+
+		if ($revision !== null) {
+			$lastMod = $revision->getTimestamp();
+			$lastModified = date('Y-m-d H:i:s', strtotime($lastMod));
+			$lastModified = "최종 수정 시각: " . $lastModified;
+		} else {
+			$lastModified = "";
+		}
 ?>
 		<header>
 			<div class="nav-wrapper navbar-fixed-top">
@@ -27,32 +37,32 @@ class LibertyTemplate extends BaseTemplate {
 		</header>
 		<section>
 			<div class="content-wrapper">
-				<?php if ( $LibertyUserSidebarSettings == false ) { ?>
+				<?php if ( $BrioUserSidebarSettings == false ) { ?>
 					<aside>
-						<div class="liberty-sidebar">
+						<div class="brio-sidebar">
 							<div class="live-recent-wrapper">
 								<?php $this->liveRecent(); ?>
 							</div>
-							<?php if ( isset( $wgLibertyAdSetting['right'] ) && $wgLibertyAdSetting['right'] ) {
+							<?php if ( isset( $wgBrioAdSetting['right'] ) && $wgBrioAdSetting['right'] ) {
 								$this->buildAd( 'right' );
 							} ?>
 						</div>
 					</aside>
 				<?php } ?>
-				<div class="container-fluid liberty-content">
-					<div class="liberty-content-header">
+				<div class="container-fluid brio-content">
+					<div class="brio-content-header">
 						<?php if (
 							$this->data['sitenotice'] &&
 							!$request->getCookie( 'disable-notice' )
 						) { ?>
-							<div class="alert alert-dismissible fade in alert-info liberty-notice" role="alert">
+							<div class="alert alert-dismissible fade in alert-info brio-notice" role="alert">
 								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
 								<?php $this->html( 'sitenotice' ); ?>
 							</div>
 						<?php } ?>
-						<?php if ( isset( $wgLibertyAdSetting['header'] ) && $wgLibertyAdSetting['header'] ) {
+						<?php if ( isset( $wgBrioAdSetting['header'] ) && $wgBrioAdSetting['header'] ) {
 							$this->buildAd( 'header' );
 						}
 						$this->contentsToolbox(); ?>
@@ -60,12 +70,13 @@ class LibertyTemplate extends BaseTemplate {
 							<h1>
 								<?php $this->html( 'title' ); ?>
 							</h1>
+							<p><?php echo htmlspecialchars($lastModified); ?></p>
 						</div>
 						<div class="contentSub" <?php $this->html( 'userlangattributes' ); ?>>
 							<?php $this->html( 'subtitle' ); ?>
 						</div>
 					</div>
-					<div class="liberty-content-main" id="content">
+					<div class="brio-content-main" id="content">
 						<?php if ( $this->data['newtalk'] ) { ?>
 							<div class="usermessage"><?php $this->html( 'newtalk' ) ?></div>
 						<?php }
@@ -77,40 +88,40 @@ class LibertyTemplate extends BaseTemplate {
 							<?php $this->html( 'bodycontent' ); ?>
 						</article>
 						<?php
-						if ( isset( $wgLibertyAdSetting['belowarticle'] ) && $wgLibertyAdSetting['belowarticle'] ) {
+						if ( isset( $wgBrioAdSetting['belowarticle'] ) && $wgBrioAdSetting['belowarticle'] ) {
 							$this->buildAd( 'belowarticle' );
 						}
 						?>
 					</div>
 					<footer>
-						<div class="liberty-footer">
+						<div class="brio-footer">
 							<?php
 							if ( $this->data['dataAfterContent'] ) {
 								$this->html( 'dataAfterContent' );
 							}
 							?>
-						<?php if ( isset( $wgLibertyAdSetting['bottom'] ) && $wgLibertyAdSetting['bottom'] ) {
+						<?php if ( isset( $wgBrioAdSetting['bottom'] ) && $wgBrioAdSetting['bottom'] ) {
 							$this->buildAd( 'bottom' );
 						}
 						if (
-							isset( $wgLibertyMobileReplaceAd ) && $wgLibertyMobileReplaceAd &&
-							isset( $wgLibertyAdSetting['right'] ) && $wgLibertyAdSetting['right']
+							isset( $wgBrioMobileReplaceAd ) && $wgBrioMobileReplaceAd &&
+							isset( $wgBrioAdSetting['right'] ) && $wgBrioAdSetting['right']
 						) { ?>
 							<div class="mobile-ads"></div>
 						<?php } ?>
 							<?php $this->footer(); ?>
 						</div>
 					</footer>
-					<div id="liberty-bottombtn">
-						<div class="scroll-button" id="liberty-scrollup"><i class="fas fa-angle-up"></i></div>
-						<div class="scroll-button" id="liberty-scrolldown"><i class="fas fa-angle-down"></i></div>
+					<div id="brio-bottombtn">
+						<div class="scroll-button" id="brio-scrollup"><i class="fas fa-angle-up"></i></div>
+						<div class="scroll-button" id="brio-scrolldown"><i class="fas fa-angle-down"></i></div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<?php
 		// Only load AdSense JS is ads are enabled in site configuration
-		if ( isset( $wgLibertyAdSetting['client'] ) && $wgLibertyAdSetting['client'] ) {
+		if ( isset( $wgBrioAdSetting['client'] ) && $wgBrioAdSetting['client'] ) {
 			// @codingStandardsIgnoreLine
 			echo '<script async defer src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>';
 		}
@@ -180,7 +191,7 @@ class LibertyTemplate extends BaseTemplate {
 					<?php
 					// @codingStandardsIgnoreStart 
 					?>
-					<button type="submit" name="go" value="<?php echo $skin->msg( 'go' )->escaped() ?>"id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-eye"></span></button>
+					<button type="submit" name="go" value="<?php echo $skin->msg( 'go' )->escaped() ?>"id="searchGoButton" class="btn btn-secondary" type="button"><span class="fa fa-arrow-right"></span></button>
 					<button type="submit" name="fulltext" value="<?php echo $skin->msg( 'searchbutton' )->escaped() ?>"id="mw-searchButton" class="btn btn-secondary" type="button">
 						<span class="fa fa-search"></span></button>
 					<?php
@@ -196,7 +207,7 @@ class LibertyTemplate extends BaseTemplate {
 	 * Login box function, build top menu's login button.
 	 */
 	protected function loginBox() {
-		global $wgLibertyUseGravatar;
+		global $wgBrioUseGravatar;
 
 		$skin = $this->getSkin();
 		$user = $skin->getUser();
@@ -208,7 +219,7 @@ class LibertyTemplate extends BaseTemplate {
 			if ( $user->isRegistered() ) {
 				$personalTools = $this->getPersonalTools();
 				// ...and Gravatar is enabled in site config...
-				if ( $wgLibertyUseGravatar ) {
+				if ( $wgBrioUseGravatar ) {
 					// ...and the user has a confirmed email...
 					if ( $user->getEmailAuthenticationTimestamp() ) {
 						// ...then, and only then, build the correct Gravatar URL
@@ -356,7 +367,7 @@ class LibertyTemplate extends BaseTemplate {
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						<h4 class="modal-title"><?php echo $skin->msg( 'liberty-login' )->escaped() ?></h4>
+						<h4 class="modal-title"><?php echo $skin->msg( 'brio-login' )->escaped() ?></h4>
 					</div>
 					<div class="modal-body">
 						<div id="modal-login-alert" class="alert alert-hidden alert-danger" role="alert">
@@ -367,9 +378,9 @@ class LibertyTemplate extends BaseTemplate {
 							<input class="loginPassword form-control" id="wpPassword1" tabindex="2" placeholder="<?php echo $skin->msg( 'userlogin-yourpassword-ph' )->escaped() ?>" type="password" name="lgpassword">
 							<div class="modal-checkbox">
 								<input name="lgremember" type="checkbox" value="1" id="lgremember" tabindex="3">
-								<label for="lgremember"><?php echo $skin->msg( 'liberty-remember' )->escaped() ?></label>
+								<label for="lgremember"><?php echo $skin->msg( 'brio-remember' )->escaped() ?></label>
 							</div>
-							<input class="btn btn-success btn-block" type="submit" value="<?php echo $skin->msg( 'liberty-login-btn' )->escaped() ?>" tabindex="4">
+							<input class="btn btn-success btn-block" type="submit" value="<?php echo $skin->msg( 'brio-login-btn' )->escaped() ?>" tabindex="4">
 							<?php echo $linkRenderer->makeKnownLink(
 								SpecialPage::getTitleFor( 'Userlogin' ),
 								$skin->msg( 'userlogin-joinproject' ),
@@ -385,12 +396,12 @@ class LibertyTemplate extends BaseTemplate {
 							); ?>
 							<?php echo $linkRenderer->makeKnownLink(
 								SpecialPage::getTitleFor( 'PasswordReset' ),
-								$skin->msg( 'liberty-forgot-pw' )->plain()
+								$skin->msg( 'brio-forgot-pw' )->plain()
 							); ?>
 							<br>
 							<?php echo $linkRenderer->makeKnownLink(
 								SpecialPage::getTitleFor( 'Userlogin' ),
-								$skin->msg( 'liberty-login-alter' )->plain()
+								$skin->msg( 'brio-login-alter' )->plain()
 							); ?>
 							<input type="hidden" name="action" value="login" />
 							<input type="hidden" name="format" value="json" />
@@ -408,34 +419,34 @@ class LibertyTemplate extends BaseTemplate {
 	 * Live recent function, build right side's Recent menus.
 	 */
 	protected function liveRecent() {
-		global $wgLibertyEnableLiveRC,
-			$wgLibertyMaxRecent,
-			$wgLibertyLiveRCArticleNamespaces,
-			$wgLibertyLiveRCTalkNamespaces;
+		global $wgBrioEnableLiveRC,
+			$wgBrioMaxRecent,
+			$wgBrioLiveRCArticleNamespaces,
+			$wgBrioLiveRCTalkNamespaces;
 
 		// Don't bother outputting this if the live RC feature is disabled in
 		// site configuration
-		if ( !$wgLibertyEnableLiveRC ) {
+		if ( !$wgBrioEnableLiveRC ) {
 			return;
 		}
 
 		$skin = $this->getSkin();
 		$linkRenderer = MediaWikiServices::getInstance()->getLinkRenderer();
-		$articleNS = implode( '|', $wgLibertyLiveRCArticleNamespaces );
-		$talkNS = implode( '|', $wgLibertyLiveRCTalkNamespaces );
+		$articleNS = implode( '|', $wgBrioLiveRCArticleNamespaces );
+		$talkNS = implode( '|', $wgBrioLiveRCTalkNamespaces );
 	?>
 		<div class="live-recent" data-article-ns="<?php echo $articleNS ?>" 
 			data-talk-ns="<?php echo $talkNS ?>">
 			<div class="live-recent-header">
 				<ul class="nav nav-tabs">
 					<li class="nav-item">
-						<a href="javascript:" class="nav-link active" id="liberty-recent-tab1">
+						<a href="javascript:" class="nav-link active" id="brio-recent-tab1">
 							<?php echo $skin->msg( 'recentchanges' )->escaped() ?>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="javascript:" class="nav-link" id="liberty-recent-tab2">
-							<?php echo $skin->msg( 'liberty-recent-discussions' )->escaped() ?>
+						<a href="javascript:" class="nav-link" id="brio-recent-tab2">
+							<?php echo $skin->msg( 'brio-recent-discussions' )->escaped() ?>
 						</a>
 					</li>
 				</ul>
@@ -444,7 +455,7 @@ class LibertyTemplate extends BaseTemplate {
 				<ul class="live-recent-list" id="live-recent-list">
 					<?php echo str_repeat(
 						'<li><span class="recent-item">&nbsp;</span></li>',
-						$wgLibertyMaxRecent
+						$wgBrioMaxRecent
 					); ?>
 				</ul>
 			</div>
@@ -452,7 +463,7 @@ class LibertyTemplate extends BaseTemplate {
 				<?php echo $linkRenderer->makeKnownLink(
 					SpecialPage::getTitleFor( 'Recentchanges' ),
 					new HtmlArmor( '<span class="label label-info">' .
-						$skin->msg( 'liberty-view-more' )->plain() .
+						$skin->msg( 'brio-view-more' )->plain() .
 						'</span>' )
 				); ?>
 			</div>
@@ -532,7 +543,7 @@ class LibertyTemplate extends BaseTemplate {
 				if ( $action != 'history' ) {
 					echo $linkRenderer->makeKnownLink(
 						$title,
-						$skin->msg( 'history' )->plain(),
+						new HtmlArmor( '<i class="fa fa-clock"></i> ' . $skin->msg( "history" )->plain() ),
 						[
 							'class' => 'btn btn-secondary tools-btn',
 							'title' => Linker::titleAttrib( 'ca-history', 'withaccess' ),
@@ -544,7 +555,7 @@ class LibertyTemplate extends BaseTemplate {
 				if ( $action == 'view' ) { ?>
 						<button type="button" class="btn btn-secondary tools-btn tools-share">
 							<i class="far fa-share-square"></i>
-							<?php echo $skin->msg( 'liberty-share' )->escaped() ?>
+							<?php echo $skin->msg( 'brio-share' )->escaped() ?>
 						</button>
 				<?php
 				}
@@ -572,10 +583,10 @@ class LibertyTemplate extends BaseTemplate {
 						}
 						echo $linkRenderer->makeKnownLink(
 							$title,
-							$skin->msg( 'liberty-purge' )->plain(),
+							$skin->msg( 'brio-purge' )->plain(),
 							[
 								'class' => 'dropdown-item',
-								'title' => $skin->msg( 'liberty-tooltip-purge' )->plain() . ' [alt+shift+p]',
+								'title' => $skin->msg( 'brio-tooltip-purge' )->plain() . ' [alt+shift+p]',
 								'accesskey' => 'p'
 							],
 							[ 'action' => 'purge' ]
@@ -601,10 +612,10 @@ class LibertyTemplate extends BaseTemplate {
 						);
 						echo $linkRenderer->makeKnownLink(
 							$title,
-							$skin->msg( 'liberty-info' )->plain(),
+							$skin->msg( 'brio-info' )->plain(),
 							[
 								'class' => 'dropdown-item',
-								'title' => $skin->msg( 'liberty-tooltip-info' )->plain(),
+								'title' => $skin->msg( 'brio-tooltip-info' )->plain(),
 							],
 							[ 'action' => 'info' ]
 						);
@@ -688,11 +699,11 @@ class LibertyTemplate extends BaseTemplate {
 				}
 				?>
 				<li class="designedbylibre">
-					<a href="//librewiki.net">
+					<a href="//github.com/d0ul/brio">
 						<?php // @codingStandardsIgnoreLine 
 						?>
 						<img src="<?php echo $this->getSkin()->getConfig()->get( 'StylePath' ); //phpcs:ignore 
-									?>/Liberty/img/designedbylibre.png" style="height:31px" alt="Designed by Librewiki">
+									?>/Brio/img/brioFooter.png" style="height:31px" alt="Designed by Librewiki">
 					</a>
 				</li>
 			</ul>
@@ -867,7 +878,7 @@ class LibertyTemplate extends BaseTemplate {
 	}
 
 	/**
-	 * Parse [[MediaWiki:Liberty-Navbar]].
+	 * Parse [[MediaWiki:Brio-Navbar]].
 	 *
 	 * Its format is:
 	 * * <icon name>|Name of the menu displayed to the user
@@ -884,13 +895,13 @@ class LibertyTemplate extends BaseTemplate {
 		$userName = $skin->getUser()->getName();
 		$userLang = $skin->getLanguage()->mCode;
 		$globalData = ContentHandler::getContentText( $this->getContentOfTitle(
-			Title::newFromText( 'Liberty-Navbar', NS_MEDIAWIKI )
+			Title::newFromText( 'Brio-Navbar', NS_MEDIAWIKI )
 		) );
 		$globalLangData = ContentHandler::getContentText( $this->getContentOfTitle(
-			Title::newFromText( 'Liberty-Navbar/' . $userLang, NS_MEDIAWIKI )
+			Title::newFromText( 'Brio-Navbar/' . $userLang, NS_MEDIAWIKI )
 		) );
 		$userData = ContentHandler::getContentText( $this->getContentOfTitle(
-			Title::newFromText( $userName . '/Liberty-Navbar', NS_USER )
+			Title::newFromText( $userName . '/Brio-Navbar', NS_USER )
 		) );
 		if ( !empty( $userData ) ) {
 			$data = $userData;
@@ -899,7 +910,7 @@ class LibertyTemplate extends BaseTemplate {
 		} else {
 			$data = $globalData;
 		}
-		// Well, [[MediaWiki:Liberty-Navbar]] *should* have some content, but
+		// Well, [[MediaWiki:Brio-Navbar]] *should* have some content, but
 		// if it doesn't, bail out here so that we don't trigger E_NOTICEs
 		// about undefined indexes later on
 		if ( empty( $data ) ) {
@@ -1221,7 +1232,7 @@ class LibertyTemplate extends BaseTemplate {
 	 * @param string $position Ad position
 	 */
 	protected function buildAd( $position ) {
-		global $wgLibertyAdSetting;
+		global $wgBrioAdSetting;
 
 		$adFormat = 'auto';
 		$fullWidthResponsive = 'true';
@@ -1233,8 +1244,8 @@ class LibertyTemplate extends BaseTemplate {
 		<div class="<?php echo $position; ?>-ads">
 			<ins class="adsbygoogle" 
 				data-full-width-responsive="<?php echo $fullWidthResponsive; ?>" 
-				data-ad-client="<?php echo $wgLibertyAdSetting['client']; ?>" 
-				data-ad-slot="<?php echo $wgLibertyAdSetting[$position]; ?>"
+				data-ad-client="<?php echo $wgBrioAdSetting['client']; ?>" 
+				data-ad-slot="<?php echo $wgBrioAdSetting[$position]; ?>"
 				data-ad-format="<?php echo $adFormat; ?>">
 			</ins>
 		</div>

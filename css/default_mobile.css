@@ -1,117 +1,141 @@
 /* Max-width: 1023 Desktop deadline */
 @media screen and (max-width: 1023px) {
-	.Liberty .nav-wrapper .navbar {
-		padding: 0 0.5rem;
+	.Brio .nav-wrapper .navbar {
+		padding: 0.2rem 0 0 0;
 	}
 
-	.Liberty .nav-wrapper .navbar .form-inline {
+	.Brio .nav-wrapper .navbar .navbar-brand {
+		margin: 0 0 0 0.8rem;
+	}
+	.Brio .nav-wrapper .navbar .navbar-login {
+		margin: 0 0.8rem 0 0;
+	}
+
+	#mw-searchButton{
+		border-radius: 0;
+	}
+	#searchInput{
+		border-radius: 0;
+		height: 100%;
+		padding: 0 0 0 .75rem;
+		font-size: 100%;
+		border-width: 0 0 1px 0;
+	}
+	.Brio .nav-wrapper .navbar .form-inline .btn {
+		border-radius: 0;
+		height: 100%;
+		border-width: 0 0 1px 0;
+		padding: 0px 12px;
+	}
+
+	.Brio .nav-wrapper .navbar .form-inline {
 		float: left;
 		padding: 0;
 		padding-top: 0.25rem;
-		padding-bottom: 0.5rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .form-inline .input-group {
+	.Brio .nav-wrapper .navbar .form-inline .input-group {
 		display: table;
 		width: 100%;
+        height: 2.5rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .form-inline .input-group .form-control {
+	.Brio .nav-wrapper .navbar .form-inline .input-group .form-control {
 		width: 100%;
 	}
 
-	.Liberty .nav-wrapper .navbar .form-inline .input-group .input-group-btn {
+	.Brio .nav-wrapper .navbar .form-inline .input-group .input-group-btn {
 		width: 1%;
 	}
 
-	.Liberty .content-wrapper {
+	.Brio .content-wrapper {
 		margin-top: 5.89rem;
 	}
 
-	.Liberty .content-wrapper .liberty-sidebar {
+	.Brio .content-wrapper .brio-sidebar {
 		display: none;
 	}
 
-	.Liberty .content-wrapper .liberty-content {
+	.Brio .content-wrapper .brio-content {
 		margin-right: auto;
 		padding-bottom: 0.5rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-header .liberty-notice {
+	.Brio .content-wrapper .brio-content .brio-content-header .brio-notice {
 		margin: 0.5rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-header .content-tools {
+	.Brio .content-wrapper .brio-content .brio-content-header .content-tools {
 		float: none;
 		text-align: right;
 		border-bottom: 1px solid #e1e8ed;
 		padding: 0.5rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-header .title {
+	.Brio .content-wrapper .brio-content .brio-content-header .title {
 		padding: 0.5rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-header .contentSub {
+	.Brio .content-wrapper .brio-content .brio-content-header .contentSub {
 		margin-top: -0.25rem;
 		padding: 0.5rem;
 		padding-top: 0;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-header .header-ads {
+	.Brio .content-wrapper .brio-content .brio-content-header .header-ads {
 		margin: 0.5rem;
 		margin-bottom: 0;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main {
+	.Brio .content-wrapper .brio-content .brio-content-main {
 		padding: 0.5rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main #upload-div {
+	.Brio .content-wrapper .brio-content .brio-content-main #upload-div {
 		display: none;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main iframe {
+	.Brio .content-wrapper .brio-content .brio-content-main iframe {
 		width: 80%;
 		height: 30rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main .mobile-table-wrapper {
+	.Brio .content-wrapper .brio-content .brio-content-main .mobile-table-wrapper {
 		overflow-x: auto;
 	}
 
-	.Liberty .content-wrapper .liberty-content .bottom-ads {
+	.Brio .content-wrapper .brio-content .bottom-ads {
 		padding: 0.5rem;
 		background-color: #fff;
 		border-left: 1px solid #e1e8ed;
 		border-right: 1px solid #e1e8ed;
 	}
 
-	.Liberty .content-wrapper .liberty-content .mobile-ads {
+	.Brio .content-wrapper .brio-content .mobile-ads {
 		padding: 0.5rem;
 		background-color: #fff;
 		border-left: 1px solid #e1e8ed;
 		border-right: 1px solid #e1e8ed;
 	}
 
-	.Liberty .content-wrapper .liberty-footer {
+	.Brio .content-wrapper .brio-footer {
 		padding: 0.5rem;
 	}
 }
 /* Max-width: 890 convert for tablet mode alt */
 @media screen and (max-width: 890px) {
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fa,
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fas,
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .far {
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .fa,
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .fas,
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .far {
 		text-align: center;
 		margin: 0 0.25rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link .hide-title {
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .nav-link .hide-title {
 		display: none;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main iframe {
+	.Brio .content-wrapper .brio-content .brio-content-main iframe {
 		width: 90%;
 		height: 20rem;
 	}
@@ -121,18 +145,18 @@
 }
 /* Max-width: 798 Menu deadline, convert for tablet mode */
 @media screen and (max-width: 798px) {
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fa,
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .fas,
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .far {
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .fa,
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .fas,
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .far {
 		text-align: center;
 		margin: 0 0.25rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link .hide-title {
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .nav-link .hide-title {
 		display: none;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main iframe {
+	.Brio .content-wrapper .brio-content .brio-content-main iframe {
 		width: 90%;
 		height: 20rem;
 	}
@@ -140,27 +164,27 @@
 }
 /* Max-width: 520px Under tablet */
 @media screen and (max-width: 520px) {
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link {
-		padding: 0.7rem 0.3rem;
-	}
+    .Brio .nav-wrapper .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.7rem 0.5rem;
+    }
 
-	.Liberty .nav-wrapper .navbar .navbar-login .view-logout {
+	.Brio .nav-wrapper .navbar .navbar-login .view-logout {
 		display: block;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-login .hide-logout {
+	.Brio .nav-wrapper .navbar .navbar-login .hide-logout {
 		display: none;
 	}
 
-	html .Liberty .content-wrapper .liberty-content .liberty-content-main table.infobox,
-	html .Liberty .content-wrapper .liberty-content .liberty-content-main table.wikitable {
+	html .Brio .content-wrapper .brio-content .brio-content-main table.infobox,
+	html .Brio .content-wrapper .brio-content .brio-content-main table.wikitable {
 		float: none;
 		width: 100%;
 		margin: auto;
 		margin-bottom: 1rem;
 	}
 
-	.Liberty .content-wrapper .liberty-content .liberty-content-main iframe {
+	.Brio .content-wrapper .brio-content .brio-content-main iframe {
 		width: 100%;
 		height: 15rem;
 	}
@@ -172,35 +196,35 @@
 
 /* Max-width: 397px Under Big-phone */
 @media screen and (max-width: 397px) {
-	.Liberty .nav-wrapper .navbar .navbar-brand {
+	.Brio .nav-wrapper .navbar .navbar-brand {
 		width: 5rem;
 		background: transparent url( ../img/logo.png ) no-repeat scroll left center/auto 1.5rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link::after {
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .nav-link::after {
 		display: none;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-nav .nav-item .nav-link {
+	.Brio .nav-wrapper .navbar .navbar-nav .nav-item .nav-link {
 		padding: 0.7rem 0.2rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-login {
+	.Brio .nav-wrapper .navbar .navbar-login {
 		padding-left: 0.4rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .navbar-notification {
+	.Brio .nav-wrapper .navbar .navbar-notification {
 		padding-left: 0.4rem;
 	}
 
-	.Liberty .nav-wrapper .navbar .form-inline {
+	.Brio .nav-wrapper .navbar .form-inline {
 		padding-top: 0.04rem;
 	}
 }
 
 /* Max-width: 34rem; */
 @media screen and (max-width: 34rem) {
-	.Liberty .login-modal .modal-sm {
+	.Brio .login-modal .modal-sm {
 		width: auto;
 	}
 }

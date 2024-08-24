@@ -4,12 +4,12 @@ body {
 
 header,
 #fixed-toc-button,
-.liberty-sidebar,
+.brio-sidebar,
 .content-tools,
 .social-buttons,
 .footer-places,
 .catlinks,
-.liberty-notice,
+.brio-notice,
 .header-ads {
 	display: none !important;
 }
@@ -18,17 +18,17 @@ header,
 	margin: 0 !important;
 }
 
-.liberty-content {
+.brio-content {
 	margin-right: 0 !important;
 }
 
-.liberty-content-header,
-.liberty-content-main,
-.liberty-footer {
+.brio-content-header,
+.brio-content-main,
+.brio-footer {
 	border: 0 !important;
 }
 
-.liberty-content-main {
+.brio-content-main {
 	padding: 0 !important;
 }
 

@@ -4,7 +4,7 @@ $( function () {
 	var width, contentHeaderOffset, indexButton, navHeight, id;
 	width = $( window ).width();
 	if ( $( '#toc' ).html() && width > 1649 ) {
-		contentHeaderOffset = $( '.liberty-content-header' ).offset();
+		contentHeaderOffset = $( '.brio-content-header' ).offset();
 		indexButton = document.createElement( 'button' );
 		indexButton.id = 'fixed-toc-button';
 		indexButton.type = 'button';

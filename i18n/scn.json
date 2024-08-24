@@ -4,17 +4,17 @@
 			"Ajeje Brazorf"
 		]
 	},
-	"liberty-layout-select-1000": "1000px",
-	"liberty-layout-select-1100": "1100px",
-	"liberty-layout-select-1300": "1300px",
-	"liberty-layout-select-1400": "1400px",
-	"liberty-layout-select-1500": "1500px",
-	"liberty-layout-select-1600": "1600px",
-	"liberty-login": "Trasi",
-	"liberty-login-btn": "Trasi",
-	"liberty-info": "Nfurmazzioni",
-	"liberty.css": "/* Li stili CSS nziriti ccà s'àpplicanu a l'utenti chi usanu la skin Liberty */",
-	"liberty.js": "/* Lu còdici JavaScript nzirutu ccà veni carricatu di l'utenti c'ùsanu la skin Liberty */",
+	"brio-layout-select-1000": "1000px",
+	"brio-layout-select-1100": "1100px",
+	"brio-layout-select-1300": "1300px",
+	"brio-layout-select-1400": "1400px",
+	"brio-layout-select-1500": "1500px",
+	"brio-layout-select-1600": "1600px",
+	"brio-login": "Trasi",
+	"brio-login-btn": "Trasi",
+	"brio-info": "Nfurmazzioni",
+	"brio.css": "/* Li stili CSS nziriti ccà s'àpplicanu a l'utenti chi usanu la skin Brio */",
+	"brio.js": "/* Lu còdici JavaScript nzirutu ccà veni carricatu di l'utenti c'ùsanu la skin Brio */",
 	"prefs-ads": "Mpustazzioni pî pubbricitati",
-	"liberty-pref-fonts-helplabel": "Aiutu"
+	"brio-pref-fonts-helplabel": "Aiutu"
 }

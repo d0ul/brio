@@ -1,6 +1,6 @@
 {
-	"name": "librewiki/liberty-mw-skin",
-	"description": "Liberty MediaWiki Skin",
+	"name": "librewiki/brio-mw-skin",
+	"description": "Brio MediaWiki Skin",
 	"license": "GPL-3.0+",
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": ">=0.9.0"

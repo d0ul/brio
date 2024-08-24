@@ -4,13 +4,13 @@
 			"Brazal.dang"
 		]
 	},
-	"liberty-login": "Mag-login",
-	"liberty-login-btn": "Mag-login",
-	"liberty-purge": "purgahin",
-	"liberty-recent-discussions": "Mga bagong diskurso",
-	"liberty-view-more": "Tingnan ang iba pa",
-	"liberty-pref-color-main": "Pangunahing kulay",
-	"liberty-pref-color-main-help": "Pangunahing kulay na gagamitin sa site na ito.",
-	"liberty-pref-color-second": "Pangalawang kulay",
-	"liberty-pref-color-second-help": "Pangalawang kulay na gagamitin sa site na ito."
+	"brio-login": "Mag-login",
+	"brio-login-btn": "Mag-login",
+	"brio-purge": "purgahin",
+	"brio-recent-discussions": "Mga bagong diskurso",
+	"brio-view-more": "Tingnan ang iba pa",
+	"brio-pref-color-main": "Pangunahing kulay",
+	"brio-pref-color-main-help": "Pangunahing kulay na gagamitin sa site na ito.",
+	"brio-pref-color-second": "Pangalawang kulay",
+	"brio-pref-color-second-help": "Pangalawang kulay na gagamitin sa site na ito."
 }

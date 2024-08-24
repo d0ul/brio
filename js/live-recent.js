@@ -65,7 +65,7 @@ $( function () {
 						text = text.substr( 0, 13 );
 						text += '...';
 					}
-					text = text.replace( '[New]', '<span class="new">' + mw.msg( 'liberty-feed-new' ) + ' </span>' );
+					text = text.replace( '[New]', '<span class="new">' + mw.msg( 'brio-feed-new' ) + ' </span>' );
 					line += text;
 					line += '</a></li>';
 					return line;
@@ -76,16 +76,16 @@ $( function () {
 		});
 	}
 
-	$( '#liberty-recent-tab1' ).click( function () {
+	$( '#brio-recent-tab1' ).click( function () {
 		$( this ).addClass( 'active' );
-		$( '#liberty-recent-tab2' ).removeClass( 'active' );
+		$( '#brio-recent-tab2' ).removeClass( 'active' );
 		isArticleTab = true;
 		refreshLiveRecent();
 	} );
 
-	$( '#liberty-recent-tab2' ).click( function () {
+	$( '#brio-recent-tab2' ).click( function () {
 		$( this ).addClass( 'active' );
-		$( '#liberty-recent-tab1' ).removeClass( 'active' );
+		$( '#brio-recent-tab1' ).removeClass( 'active' );
 		isArticleTab = false;
 		refreshLiveRecent();
 	} );

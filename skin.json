@@ -1,12 +1,12 @@
 {
-	"name": "Liberty",
+	"name": "Brio",
 	"author": [
 		"Librewiki developers",
 		"..."
 	],
-	"url": "https://github.com/librewiki/liberty-skin",
-	"descriptionmsg": "liberty-desc",
-	"namemsg": "skinname-liberty",
+	"url": "https://github.com/librewiki/brio-skin",
+	"descriptionmsg": "brio-desc",
+	"namemsg": "skinname-brio",
 	"license-name": "GPL-3.0-or-later",
 	"type": "skin",
 	"version": "1.13.7",
@@ -14,44 +14,44 @@
 		"MediaWiki": ">= 1.39.0"
 	},
 	"ValidSkinNames": {
-		"liberty": {
-			"displayname": "Liberty",
-			"class": "SkinLiberty",
+		"brio": {
+			"displayname": "Brio",
+			"class": "SkinBrio",
 			"args": [ {
-				"name": "liberty",
-				"bodyClasses": [ "Liberty", "width-size" ],
+				"name": "brio",
+				"bodyClasses": [ "Brio", "width-size" ],
 				"bodyOnly": true,
 				"responsive": true,
-				"template": "LibertyTemplate",
+				"template": "BrioTemplate",
 				"styles": [
-					"skins.liberty.styles"
+					"skins.brio.styles"
 				]
 			} ]
 		}
 	},
 	"MessagesDirs": {
-		"Liberty": [
+		"Brio": [
 			"i18n"
 		]
 	},
 	"config": {
-		"LibertyEnableLiveRC": true,
-		"LibertyUseGravatar": true,
-		"LibertyMainColor": "#4188F1",
-		"LibertySecondColor": null,
-		"LibertyAdSetting": null,
-		"LibertyOgLogo": null,
+		"BrioEnableLiveRC": true,
+		"BrioUseGravatar": true,
+		"BrioMainColor": "#4188F1",
+		"BrioSecondColor": null,
+		"BrioAdSetting": null,
+		"BrioOgLogo": null,
 		"TwitterAccount": null,
 		"NaverVerification": null,
-		"LibertyMobileReplaceAd": false,
-		"LibertyLiveRCArticleNamespaces": [
+		"BrioMobileReplaceAd": false,
+		"BrioLiveRCArticleNamespaces": [
 			0,
 			4,
 			10,
 			12,
 			14
 		],
-		"LibertyLiveRCTalkNamespaces": [
+		"BrioLiveRCTalkNamespaces": [
 			1,
 			3,
 			5,
@@ -61,7 +61,7 @@
 			13,
 			15
 		],
-		"LibertyMaxRecent": 10
+		"BrioMaxRecent": 10
 	},
 	"AvailableRights": [
 		"blockads-header",
@@ -70,7 +70,7 @@
 		"blockads-bottom"
 	],
 	"ResourceModules": {
-		"skins.liberty.styles": {
+		"skins.brio.styles": {
 			"class": "MediaWiki\\ResourceLoader\\SkinModule",
 			"features": {
 				"interface": false,
@@ -103,7 +103,7 @@
 				"css/wiki-table.css": {
 					"media": "all"
 				},
-				"css/wikiedittor-liberty.css": {
+				"css/wikiedittor-brio.css": {
 					"media": "all"
 				},
 				"css/extensions/RelatedArticles.css": {
@@ -114,16 +114,16 @@
 				}
 			}
 		},
-		"skins.liberty.ads": {
+		"skins.brio.ads": {
 			"scripts": "js/ads.js"
 		},
-		"skins.liberty.bootstrap": {
+		"skins.brio.bootstrap": {
 			"scripts": [
 				"js/lib/jquery.ba-throttle-debounce.js",
 				"js/lib/bootstrap.min.js"
 			]
 		},
-		"skins.liberty.layoutjs": {
+		"skins.brio.layoutjs": {
 			"scripts": [
 				"js/delay-scrolling.js",
 				"js/disable-notice.js",
@@ -134,24 +134,24 @@
 			],
 			"dependencies": "mediawiki.cookie"
 		},
-		"skins.liberty.liverc": {
+		"skins.brio.liverc": {
 			"scripts": "js/live-recent.js",
 			"messages": [
-				"liberty-feed-new"
+				"brio-feed-new"
 			],
 			"dependencies": "mediawiki.util"
 		},
-		"skins.liberty.loginjs": {
+		"skins.brio.loginjs": {
 			"scripts": "js/login-request.js",
 			"dependencies": "mediawiki.util"
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Liberty"
+		"remoteSkinPath": "Brio"
 	},
 	"ResourceModuleSkinStyles": {
-		"liberty": {
+		"brio": {
 			"+ext.relatedArticles.readMore": "css/extensions/RelatedArticles.css",
 			"+ext.echo.ui": "css/extensions/Echo.css",
 			"+mediawiki.action.view.filepage": "css/skinStyles/mediawiki.action.view.filepage.css",
@@ -159,13 +159,13 @@
 		}
 	},
 	"AutoloadClasses": {
-		"SkinLiberty": "SkinLiberty.php",
-		"LibertyTemplate": "LibertyTemplate.php",
-		"LibertyHooks": "LibertyHooks.php"
+		"SkinBrio": "SkinBrio.php",
+		"BrioTemplate": "BrioTemplate.php",
+		"BrioHooks": "BrioHooks.php"
 	},
 	"Hooks": {
-		"GetPreferences": "LibertyHooks::onGetPreferences",
-		"OutputPageBodyAttributes": "LibertyHooks::onOutputPageBodyAttributes"
+		"GetPreferences": "BrioHooks::onGetPreferences",
+		"OutputPageBodyAttributes": "BrioHooks::onOutputPageBodyAttributes"
 	},
 	"manifest_version": 1
 }
