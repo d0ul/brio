@@ -12,7 +12,7 @@
 			"코코아"
 		]
 	},
-	"skinname-liberty": "리버티",
+	"skinname-liberty": "brio",
 	"liberty-desc": "[https://librewiki.net/ 리브레 위키]를 위한 반응형 스킨",
 	"liberty-dark-default": "무시하지 않음",
 	"liberty-dark-dark": "무시하고 어두운 모드 활성화",
@@ -50,9 +50,9 @@
 	"liberty-tooltip-info": "문서의 정보를 열람합니다",
 	"liberty-tooltip-purge": "이 문서의 캐시를 새로 고칩니다.",
 	"liberty-view-more": "더 보기",
-	"liberty.css": "/* 이 CSS 설정은 리버티 스킨을 사용하는 사용자에게 적용됩니다 */",
-	"liberty.js": "/* 이 자바스크립트 설정은 리버티 스킨을 사용하는 사용자에게 적용됩니다 */",
-	"prefs-liberty": "리버티 스킨",
+	"liberty.css": "/* 이 CSS 설정은 brio 스킨을 사용하는 사용자에게 적용됩니다 */",
+	"liberty.js": "/* 이 자바스크립트 설정은 brio 스킨을 사용하는 사용자에게 적용됩니다 */",
+	"prefs-liberty": "brio 스킨",
 	"prefs-color": "색상 설정",
 	"prefs-layout": "레이아웃 설정",
 	"prefs-ads": "광고 설정",
@@ -74,8 +74,8 @@
 	"liberty-pref-ads-right": "우측 광고를 제거합니다.",
 	"liberty-pref-ads-bottom": "하단 광고를 제거합니다.",
 	"liberty-pref-ads-belowarticle": "문서 공간 아래의 광고를 제거",
-	"right-blockads-header": "리버티 스킨에서 헤더 광고를 제거할 수 있습니다.",
-	"right-blockads-right": "리버티 스킨에서 우측 광고를 제거할 수 있습니다.",
-	"right-blockads-belowarticle": "리버티 스킨에서 글 하단 광고를 제거할 수 있습니다.",
-	"right-blockads-bottom": "리버티 스킨에서 하단 광고를 제거할 수 있습니다."
+	"right-blockads-header": "brio 스킨에서 헤더 광고를 제거할 수 있습니다.",
+	"right-blockads-right": "brio 스킨에서 우측 광고를 제거할 수 있습니다.",
+	"right-blockads-belowarticle": "brio 스킨에서 글 하단 광고를 제거할 수 있습니다.",
+	"right-blockads-bottom": "brio 스킨에서 하단 광고를 제거할 수 있습니다."
 }

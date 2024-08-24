@@ -1,14 +1,10 @@
-# Liberty MediaWiki Skin
-
-[English](.github/README.en.md)
-
-[리브레 위키](https://librewiki.net)의 기본 스킨입니다. 위키 엔진 '리버티'의 기본 레이아웃입니다.
+# brio skin, powered by Liberty.
+Brio는 활력을 뜻하는 영단어입니다. 이 스킨은 Liberty 스킨을 기반으로 제작되었습니다.
 
 ## 개발
+원본 소스는 [GitHub.com](https://github.com/d0ul/brio)에 존재하며, 패치는 GitHub.com 에서만 받고 있습니다. 이 외의 호스팅에서 발견되는 코드는 모두 미러링이며, 코드의 최신성을 보증하지 않습니다.
 
-원본 소스는 [GitHub.com](https://github.com/librewiki/liberty-skin)에 존재하며, 버그 리포팅은 [bbs.librewiki.net](https://bbs.librewiki.net/)에서, 패치는 GitHub.com 에서만 받고 있습니다. 이 외의 호스팅에서 발견되는 코드는 모두 미러링이며, 코드의 최신성을 보증하지 않습니다.
-
-보안 취약점은 이메일 (dev(골뱅이!)librewiki.net) 로 보고해 주세요.
+보안 취약점은 이메일 (supportⓐpcor.me) 로 보고해 주세요.
 
 ## 설치
 * 미디어위키 Skins 폴더에 압축을 풀거나 git clone을 수행하세요. 압축해제된 폴더의 이름은 `Liberty` 이어야 합니다.
